@@ -1,0 +1,169 @@
+:root {
+  --accent: #7e4e7a;
+  --dark: #090513;
+  --light001: #dfe5f3;
+  --light002: #8986a9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  background-color: var(--dark);
+  color: var(--light001);
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background-color: var(--dark);
+  outline: none;
+  border: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  color: #fff;
+  height: 18px;
+  border: 1px solid var(--light001);
+  margin: -3px;
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+
+.btn.on:after {
+  transform: rotate(135deg);
+}
+
+.btn.on:before {
+  transform: rotate(45deg);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 360px;
+  height: 100%;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+  transition: all 0.3s;
+}
+
+nav.on {
+  left: 0;
+}
+
+.nav a {
+  font-size: 46px;
+  display: inline-block;
+  padding: 10px 0;
+  margin: 20px 0;
+  color: var(--light001);
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      90deg,
+      rgba(7, 13, 34, 0.8) 0%,
+      rgba(71, 17, 56, 0.8) 100%
+    ),
+    url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  width: 1160px;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .info {
+}
+
+.content .info p {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: var(--light002);
+}
+
+.content .info h1 {
+  margin: 30px 0 40px 0;
+  font-size: 66px;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.content .info .line {
+  width: 250px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 80px;
+}
+
+.sns a {
+  color: var(--light002);
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.sns a span {
+  position: relative;
+  top: -1px;
+  transition: all 0.3s;
+}
+
+.sns a:nth-child(1) {
+  margin-right: 3rem;
+}
+
+.sns a i {
+  font-size: 1.4rem;
+  margin-right: 0.6rem;
+}
+
+.sns a:hover span {
+  color: var(--light001);
+}
+
+.content .photo {
+  font-size: 0;
+}
